@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>the wether</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wether"></div>
+    <img class="img1" src="images\pic1.png">
+    <img class="img2" src="images\pic2.png">
+    <img class="img3" src="images\pic3.png">
+    <img class="img4" src="images\pic3.png">
+	<script type="text/babel">
+        class Card extends React.Component{
+            render(){
+                return(
+                    <div className="ss">
+                        <h1>{this.props.name}</h1>
+                        <h2>{this.props.temp}</h2>
+                        <h3>{this.props.condition}</h3>
+                    </div>
+                )
+            }
+
+        }
+        ReactDOM.render(
+            <div className="card">
+                <Card name="Утро" temp="−14°" condition="ясно"/>
+                <Card name="День" temp="−7°" condition="облачно с прояснениями" />  
+                <Card name="Вечер" temp="−6°" condition="небольшой снег" />  
+                <Card name="Ночь" temp="−5°" condition="небольшой снег" />    
+            </div>,
+        document.querySelector(".wether"))
+        ReactDOM.render(
+            <div className="picture">
+                <img src="images\pic1.png"/>
+            </div>
+        )
+    </script>
+</body>
+</html>
